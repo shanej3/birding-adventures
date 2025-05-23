@@ -1,0 +1,31 @@
+.header {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    justify-content: center;
+    align-items : center;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
+h1 {
+  font-size: 2rem;
+  line-height: 1.1;
+}
+h2 {
+    font-size: 1rem;
+    line-height: 1.1;
+    font-weight: 400;
+}
+.header-left {
+    text-align: left;
+    justify-self: start;
+}
+
+.header-center {
+    justify-self: center;
+    margin: 0;
+}
+.header-right { 
+    text-align: right;
+    justify-self: end;
+}
