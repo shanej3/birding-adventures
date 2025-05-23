@@ -1,0 +1,13 @@
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    
+    gap: 1rem;
+}
+.grid-image {
+    display : block;
+    width: 100%;
+
+    object-fit: contain;
+    margin: 0;
+}

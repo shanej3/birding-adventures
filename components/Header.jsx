@@ -1,7 +1,7 @@
 function Header() {
     return (
         <header>
-            <h1>My Application</h1>
+            <h1>The Shane & Loza Birding Adventures</h1>
         </header>
     )
 }
