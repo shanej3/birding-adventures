@@ -1,6 +1,7 @@
 import './Header.css'
 
 function Header() {
+    
     return (
         <header className="header">
             <h2 className = "header-left">Spring 2025</h2>
