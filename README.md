@@ -1,6 +1,6 @@
 ### Birding adventures!
 
-Basic website to display photographs
+Basic website to display photographs a friend and I have taken the past couple months on our birding trips
 
 Written in React with JavaScript
 
