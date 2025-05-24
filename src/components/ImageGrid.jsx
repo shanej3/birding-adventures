@@ -2,12 +2,15 @@ import "./ImageGridStyles.css"
 import { useState } from "react";
 import Modal from "./Modal.jsx";
 
-const images = import.meta.glob('../src/assets/images/*.jpg', { eager: true });
+const images = import.meta.glob('../assets/images/*.jpg', { eager: true });
 
-const imageList = Object.keys(images).map((key, i) => {
-    const path = key.replace('/public', ''); 
-    return { id: i, src: path };
-})
+const imageList = Object.entries(images).map(([key, mod], i) => ({
+  id: i,
+  src: mod.default,
+}));
+
+
+
 
 function ImageGrid() {
     const [selectedPhoto, setSelectedPhoto] = useState(null);
