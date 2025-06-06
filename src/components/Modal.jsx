@@ -1,7 +1,7 @@
 import './Modal.css'
-export default function Modal({src, alt, onClose}) {
+export default function Modal({src, alt, onClose, nextImage, previousImage}) {
     return (
-        <div
+        <div className="modal-overlay"
             onClick={onClose}
             style={{
                 position: 'fixed',
@@ -16,6 +16,14 @@ export default function Modal({src, alt, onClose}) {
                 animation: 'fadeIn 0.25s',
             }}
             >
+                <button
+                    className="previous-image-button"
+                    onClick={e => {
+                        e.stopPropagation(); // prevent it from closing when clicking next
+                        previousImage();
+                    }}>
+                    <span class="next-image-text">Previous</span>
+                </button>
                 <img
                     src={src}
                     alt={alt}
@@ -26,6 +34,15 @@ export default function Modal({src, alt, onClose}) {
                     }}
                     onClick={e => e.stopPropagation()} // prevent it from closing when clicking image
                     />
+                <button
+                    className="next-image-button"
+                    onClick={e => {
+                        e.stopPropagation(); // prevent it from closing when clicking next
+                        nextImage();
+                    }}>
+                    <span class="next-image-text">Next Image</span>
+                </button>
+                    
             </div>
     )
 }
